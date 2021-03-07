@@ -1,5 +1,5 @@
 ## 概述
-miniu 支持vscode + 浏览器开发小程序，官方地址：https://miniu.alipay.com/。
+miniu 支持vscode + 浏览器开发小程序，官方地址：https://miniu.alipay.com/ 。
 
 ## 开发指令
 miniu dev
