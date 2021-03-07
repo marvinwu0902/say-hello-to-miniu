@@ -1,0 +1,7 @@
+.miniu
+miniu_dist
+node_modules
+.tea
+dist
+.vscode
+.DS_Store
