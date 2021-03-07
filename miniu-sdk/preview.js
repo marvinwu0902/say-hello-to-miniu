@@ -3,7 +3,7 @@ const ora = require('ora');
 const path = require('path');
 const getPreviewApp = require('./base');
 
-const spinner = ora('upload start...\n').start();
+const spinner = ora('preview start...\n').start();
 
 const codePath = path.join(__dirname, '../');
 
@@ -18,7 +18,7 @@ async function previewTinyApp() {
       console.log(status, data);
     },
   });
-  console.log('the result of upload tiny app is: ', previewResult);
+  console.log('the result of preview tiny app is: ', previewResult);
   spinner.succeed('小程序预览成功');
   return previewResult;
 }

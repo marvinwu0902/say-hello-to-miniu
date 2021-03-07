@@ -11,8 +11,7 @@ const codePath = path.join(__dirname, '../');
 async function uploadTinyApp() {
   const app = await getUploadApp();
   const { appId } = app;
-  spinner.info(`upload appId is ${appId}`);
-  spinner.start('upload continue\n');
+  console.log(`upload appId is ${appId}`);
   const lastVersion = await miniu.getUploadVersion({
     appId,
   });
@@ -21,8 +20,7 @@ async function uploadTinyApp() {
   if (lastVersion) {
     uploadVersion = semver.inc(lastVersion, 'patch');
   }
-  spinner.info(`upload version is ${uploadVersion}`);
-  spinner.start('upload continue\n');
+  console.log(`upload version is ${uploadVersion}`);
   const uploadResult = await miniu.miniUpload({
     project: codePath,
     appId,
@@ -30,7 +28,7 @@ async function uploadTinyApp() {
     experience: true, // 设置为体验版本
     onProgressUpdate (info) {
       const { status, data } = info
-      console.log(`status: ${status}, data: ${JSON.stringify(data)}`);
+      console.log(status, data);
     },
   });
   console.log(`the result of upload tiny app is: ${JSON.stringify(uploadResult)}`);
