@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@feat/ci
     
       - name: build
-        uses: actions/miniu@2.0.0
+        uses: JamesIves/github-pages-deploy-action@master
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: feat/ci
