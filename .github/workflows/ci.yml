@@ -13,15 +13,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
-        uses: actions/checkout@master
-        with:
-          persist-credentials: false
-      - name: build
-        uses: JamesIves/github-pages-deploy-action@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: feat/ci
-          FOLDER: build
-          BUILD_SCRIPT: npm install && npm run build
+      - run: npm install miniu && miniu mini build
 
