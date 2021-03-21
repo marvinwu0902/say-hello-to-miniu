@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@feat/ci
-    
+        with:
+          persist-credentials: false
       - name: build
         uses: JamesIves/github-pages-deploy-action@master
         env:
