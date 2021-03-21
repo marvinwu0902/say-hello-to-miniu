@@ -10,6 +10,7 @@
   "scripts": {
     "key": "node ./miniu-sdk/key.js",
     "preview": "node ./miniu-sdk/preview.js",
-    "upload": "node ./miniu-sdk/upload.js"
+    "upload": "node ./miniu-sdk/upload.js",
+    "ci": "miniu mini upload"
   }
 }

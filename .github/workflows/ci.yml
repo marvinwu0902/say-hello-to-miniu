@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ feat/ci ]
+  pull_request:
+    branches: [ feat/ci ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@feat/ci
+    
+      - name: build
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: feat/ci
+          FOLDER: build
+          BUILD_SCRIPT: npm install && npm run build
+
