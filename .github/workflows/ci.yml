@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: npm install miniu && node ./miniu-sdk/upload.js
+      - run: npm install miniu && npm run upload
 
