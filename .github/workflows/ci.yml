@@ -13,5 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: npm install miniu && npm run upload
+      - uses: actions/checkout@v2
+        run: npm install miniu && npm run upload
 
