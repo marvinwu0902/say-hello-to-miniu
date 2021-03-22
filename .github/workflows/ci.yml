@@ -14,5 +14,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-        run: npm install miniu && npm run upload
+      
+      - run: npm install miniu && npm run upload
 
