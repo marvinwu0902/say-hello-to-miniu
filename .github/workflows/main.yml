@@ -33,4 +33,3 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm install miniu && npm run upload
-          echo test, and deploy your project.
